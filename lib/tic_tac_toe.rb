@@ -95,8 +95,9 @@ class TicTacToe
 
   def play
     until over? do
-      if !draw?
-        turn
+      turn
+      if draw?
+        return
       end
     end
     puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
